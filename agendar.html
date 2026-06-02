@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section class="agendar">
+        <div class="container agendar-container">
+
+            <div class="agendar-form">
+                <h1>Agendar Consulta</h1>
+                <p>Preencha o formulário e entraremos em contacto consigo.</p>
+
+                <form id="agendarForm">
+                    <input type="text" placeholder="Nome (Primeiro/Último)" required>
+                    <input type="email" placeholder="Email" required>
+
+                    <select required>
+                        <option value="">Selecionar Serviço</option>
+
+                        <optgroup label="Áreas de Intervenção">
+
+                            <option>Ansiedade</option>
+                            <option>Depressão</option>
+                            <option>Fobias</option>
+                            <option>Stress</option>
+                            <option>Vícios</option>
+                            <option>Confiança</option>
+
+                        </optgroup>
+
+                        <optgroup label="Hipnoses Clínicas">
+
+                            <option>Autoestima</option>
+                            <option>Terapia de Casal</option>
+                            <option>Hipnose para Vícios</option>
+                            <option>Terapia de Emagrecimento</option>
+
+                        </optgroup>
+
+                    </select>
+
+                    <textarea placeholder="Deixe a sua mensagem (opcional)"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="agendar-info">
+                <h2>Informações</h2>
+
+                <p><strong>Duração:</strong> 60 min</p>
+                <p><strong>Formato:</strong> Online & Presencial</p>
+                <p><strong>Horário:</strong> Seg - Sex | 09h às 19h</p>
+                <p><strong>NOTA:</strong> Para marcar uma consulta por este formulário é necessário possuir a Aplicação <strong>WhatsApp</strong> 
+                    instalada no seu dispositivo. Está mensagem será enviada diretamente para o Hipnoterapeuta.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
