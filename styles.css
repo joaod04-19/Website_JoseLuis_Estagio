@@ -1,41 +1,70 @@
+/* ====================================
+   CONFIGURAÇÕES & COMPONENTES GERAIS
+======================================= */
+:root {
+    --primary: #1A3A5C;
+    --secondary: #f7c06f;
+    --light: white;
+    --dark: black;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Trebuchet MS, sans-serif
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: Trebuchet MS, sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    line-height: 1.6;
 }
 
 .container {
     width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* ===============================================
-   BARRA DE NAVEGAÇÃO NO TOPO - PÁGINA PRINCIPAL
-================================================== */
-/* HEADER FIXO */
+/* ===================
+   BOTÕES DO WEBSITE
+====================== */
+.btn-primary {
+    padding: 16px 28px;
+    background: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ==========================================
+   HEADER - BARRA DE NAVEGAÇÃO (index.html) 
+============================================= */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
+    background: var(--light);
     padding: 20px 0;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-.header-container {
+.header .container {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
@@ -44,12 +73,10 @@ h4 {
     justify-content: space-between;
 }
 
-/* LOGO */
 .logo img {
     height: 90px;
 }
 
-/* NAVBAR */
 .navbar {
     margin-left: auto;
     margin-right: 40px;
@@ -63,35 +90,23 @@ h4 {
 
 .navbar a {
     text-decoration: none;
-    color: #1A3A5C;
+    color: var(--primary);
     font-size: 17px;
     font-weight: 500;
 }
 
 .navbar a:hover {
     text-decoration: underline;
-    color: #f7c06f;
-}
-
-/* BOTÃO */
-.btn {
-    padding: 16px 28px;
-    background: #1A3A5C;
-    color: white;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: #f7c06f;
-    color: #1A3A5C;
+    color: var(--secondary);
 }
 
 
-/* =========================
-   HERO - PÁGINA PRINCIPAL
-============================ */
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ======================================
+   HERO - PÁGINA PRINCIPAL (index.html) 
+========================================= */
 .hero {
     margin-top: 140px;
     height: 75vh;
@@ -102,7 +117,6 @@ h4 {
     align-items: center;
 }
 
-/* SLIDES */
 .slide {
     position: absolute;
     inset: 0;
@@ -116,7 +130,6 @@ h4 {
     opacity: 1;
 }
 
-/* SHADOW OVERLAY */
 .hero::after {
     content: "";
     position: absolute;
@@ -125,12 +138,11 @@ h4 {
     z-index: 1;
 }
 
-/* TEXT OVERLAY */
 .hero-overlay {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: white;
+    color: var(--light);
     padding: 40px;
 }
 
@@ -144,31 +156,34 @@ h4 {
 }
 
 
-/* ===============================
-   SOBRE MIM - PÁGINA PRINICIPAL
-================================== */
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ===========================================
+   SOBRE MIM - PÁGINA PRINCIPAL (index.html) 
+============================================== */
 .about {
     padding: 120px 0;
     background: #F8F6F2;
 }
 
-.section-title {
+.about-title {
     text-align: center;
     margin-bottom: 70px;
 }
 
-.section-title h2 {
+.about-title h2 {
     font-size: 42px;
-    color: #1A3A5C;
+    color: var(--primary);
     margin-bottom: 15px;
 }
 
-.section-title p {
+.about-title p {
     font-size: 18px;
-    color: #666;
+    color: var(--dark);
 }
 
-.about-container {
+.about-information {
     display: flex;
     align-items: center;
     gap: 70px;
@@ -187,7 +202,7 @@ h4 {
 
 .about-content h3 {
     font-size: 38px;
-    color: #1A3A5C;
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
@@ -201,7 +216,7 @@ h4 {
 .about-content p {
     font-size: 17px;
     line-height: 1.8;
-    color: #444;
+    color: var(--dark);
     margin-bottom: 25px;
 }
 
@@ -212,46 +227,43 @@ h4 {
 
 .about-list li {
     margin-bottom: 14px;
-    color: #1A3A5C;
+    color: var(--primary);
     font-size: 16px;
 }
 
 
-/* ==============================
-   SERVIÇOS - PÁGINA PRINICIPAL
-================================= */
-/* SERVIÇOS */
-.services {
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ==========================================
+   SERVIÇOS - PÁGINA PRINCIPAL (index.html) 
+============================================= */
+.services-areas,
+.clinical-services {
     padding: 120px 0;
     background: #F8F6F2;
 }
 
-.section-title {
+.services-title {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.section-title h2 {
+.services-title h2 {
     font-size: 46px;
-    color: #1A3A5C;
+    color: var(--primary);
     margin-bottom: 12px;
 }
 
-.section-title p {
-    font-size: 18px;
-    color: #666;
-}
-
-/* GRID */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
 }
 
-/* CARDS */
-.service-card {
-    background: white;
+.service-area-card,
+.service-clinical-card {
+    background: var(--light);
     padding: 45px 20px;
     border-radius: 24px;
     text-align: center;
@@ -260,42 +272,60 @@ h4 {
     transition: 0.3s ease;
 }
 
-.service-card:hover {
-    background: #1A3A5C;
+.service-area-card:hover,
+.service-clinical-card:hover {
+    background: var(--primary);
     transform: translateY(-8px);
 }
 
-.service-card i {
+.service-area-card i,
+.service-clinical-card i {
     font-size: 34px;
-    color: #1A3A5C;
+    color: var(--primary);
     margin-bottom: 18px;
     transition: 0.3s;
 }
 
-.service-card h3 {
-    color: #1A3A5C;
+.service-area-card h3,
+.service-clinical-card h3 {
+    color: var(--primary);
     font-size: 20px;
     transition: 0.3s;
 }
 
-.service-card:hover i,
-.service-card:hover h3 {
-    color: white;
-}
-
-/* HIPNOSES CLÍNICAS */
-.clinical-services {
-    padding: 100px 0;
-    background: #f8f8f8;
+.service-area-card:hover i,
+.service-area-card:hover h3,
+.service-clinical-card:hover i,
+.service-clinical-card:hover h3 {
+    color: var(--light);
 }
 
 
-/* ================================
-   TESTEMUNHOS - PÁGINA PRINCIPAL
-=================================== */
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =============================================
+   TESTEMUNHOS - PÁGINA PRINCIPAL (index.html) 
+================================================ */
 .testimonials {
     padding: 120px 0;
     background: #F8F6F2;
+}
+
+.testimonials-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.testimonials-title h2 {
+    font-size: 42px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.testimonials-title p {
+    font-size: 18px;
+    color: var(--dark);
 }
 
 .testimonials-grid {
@@ -306,7 +336,7 @@ h4 {
 }
 
 .testimonial-card {
-    background: white;
+    background: var(--light);
     padding: 40px 30px;
     border-radius: 24px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -317,45 +347,48 @@ h4 {
     transform: translateY(-8px);
 }
 
+.quote i {
+    font-size: 60px;
+    color: var(--primary);
+    opacity: 0.15;
+    display: block;
+    line-height: 1;
+}
+
 .stars {
     font-size: 24px;
-    color: #F4B400;
+    color: var(--secondary);
     margin-bottom: 20px;
 }
 
 .testimonial-card p {
     font-size: 18px;
-    color: #444;
+    color: var(--dark);
     line-height: 1.6;
     margin-bottom: 25px;
     font-style: italic;
 }
 
 .testimonial-card h4 {
-    color: #1A3A5C;
+    color: var(--primary);
     font-size: 18px;
     font-weight: 600;
 }
 
-.quote {
-    font-size: 60px;
-    color: #1A3A5C;
-    opacity: 0.15;
-    display: block;
-    line-height: 1;
-}
 
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
 
-/* ===========================
-   RODAPÉ - TODAS AS PÁGINAS
-============================== */
-.site-footer {
-    background: #1A3A5C;
-    color: white;
+/* ========================================
+   RODAPÉ - PÁGINA PRINCIPAL (index.html) 
+=========================================== */
+.footer {
+    background: var(--primary);
+    color: var(--light);
     padding: 80px 0 30px;
 }
 
-.footer-content {
+.footer .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -363,7 +396,6 @@ h4 {
     margin-bottom: 70px;
 }
 
-/* colunas */
 .footer-left,
 .footer-right {
     width: 300px;
@@ -380,14 +412,12 @@ h4 {
     margin-bottom: 18px;
 }
 
-/* linha vertical */
 .footer-divider {
     width: 1px;
     height: 220px;
     background: rgba(255, 255, 255, 0.6);
 }
 
-/* redes */
 .social-icons {
     display: flex;
     gap: 20px;
@@ -397,12 +427,12 @@ h4 {
 .social-icons a {
     width: 90px;
     height: 90px;
-    background: white;
+    background: var(--light);
     border-radius: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1A3A5C;
+    color: var(--primary);
     font-size: 34px;
     text-decoration: none;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
@@ -413,7 +443,6 @@ h4 {
     transform: translateY(-5px);
 }
 
-/* bottom */
 .footer-bottom {
     text-align: center;
     font-size: 18px;
@@ -428,25 +457,27 @@ h4 {
 }
 
 
-/* ===================
-   AGENDAR CONSULTA
-====================== */
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =================================
+   AGENDAR CONSULTA (agendar.html) 
+==================================== */
 .agendar {
     min-height: 100vh;
     padding: 140px 0;
     background: #F8F6F2;
 }
 
-.agendar-container {
+.agendar .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 50px;
     align-items: start;
 }
 
-/* formulário */
 .agendar-form {
-    background: white;
+    background: var(--light);
     padding: 50px;
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
@@ -454,16 +485,15 @@ h4 {
 
 .agendar-form h1 {
     font-size: 42px;
-    color: #1A3A5C;
+    color: var(--primary);
     margin-bottom: 15px;
 }
 
 .agendar-form p {
-    color: #666;
+    color: var(--dark);
     margin-bottom: 35px;
 }
 
-/* inputs */
 .agendar-form form {
     display: flex;
     flex-direction: column;
@@ -486,22 +516,20 @@ h4 {
     resize: none;
 }
 
-/* botão */
 .agendar-form button {
     padding: 18px;
     border: none;
     border-radius: 999px;
-    background: #1A3A5C;
-    color: #FFDEAD;
+    background: var(--primary);
+    color: var(--secondary);
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 }
 
-/* info lateral */
 .agendar-info {
-    background: #1A3A5C;
-    color: white;
+    background: var(--primary);
+    color: var(--light);
     padding: 45px;
     border-radius: 30px;
 }
@@ -514,4 +542,189 @@ h4 {
 .agendar-info p {
     margin-bottom: 18px;
     line-height: 1.7;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =====================
+   RESPONSIVO - TABLET
+======================== */
+@media (max-width: 1024px) {
+
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-information {
+        gap: 40px;
+    }
+
+    .about-image img {
+        width: 350px;
+    }
+
+    .agendar .container {
+        grid-template-columns: 1fr;
+    }
+
+    .agendar-info {
+        order: -1;
+    }
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =====================
+   RESPONSIVO - MOBILE
+======================== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        padding: 15px 0;
+    }
+
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .navbar {
+        margin: 0;
+    }
+
+    .navbar ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-primary {
+        padding: 14px 22px;
+    }
+
+    /* HERO */
+    .hero {
+        margin-top: 190px;
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* TITULOS */
+    .about-title h2,
+    .services-title h2,
+    .testimonials-title h2 {
+        font-size: 32px;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 80px 0;
+    }
+
+    .about-information {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about-content h3 {
+        font-size: 32px;
+    }
+
+    .about-list {
+        padding: 0;
+    }
+
+    /* SERVIÇOS */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-area-card,
+    .service-clinical-card {
+        padding: 35px 20px;
+    }
+
+    /* TESTEMUNHOS */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-left h3,
+    .footer-right h3 {
+        font-size: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons a {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    /* AGENDAR */
+    .agendar {
+        padding: 180px 0 80px;
+    }
+
+    .agendar .container {
+        grid-template-columns: 1fr;
+    }
+
+    .agendar-form {
+        padding: 30px;
+    }
+
+    .agendar-info {
+        padding: 30px;
+    }
+
+    .agendar-form h1 {
+        font-size: 32px;
+    }
+
+    .agendar-info h2 {
+        font-size: 28px;
+    }
 }
